@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style>
+            #Container {
+                background-color: lightgray;
+                margin-left: auto;
+                margin-right: auto;
+                width: 800px;
+            }
+            #Header {
+                background-color: purple;
+                color: white;
+                text-align: center;  
+            }
+            #Footer {
+                background-color: black;
+                color: white;
+                padding-right: 10px;
+            }
+            #Content {
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+
+
+          </style>  
+    </head>
+
+    <head>
+        <h1>Forms</h1>
+    </head>
+    <body>
+        <div id = "Container">
+            
+        
+
+            <div id="Header">
+                <title>&copy; ingen pirater</title>
+            </div>
+
+            <div id="Content">
+                <form action="" method="POST" novalidate>
+                    {{ afrm.hidden_tag() }}
+                    <p>
+                        {{afrm.customerID.label }} <br>
+                        {{afrm.customerID(size=32) }}
+                    </p>
+                    <p>
+                        {{ afrm.inventoryID.label }} <br>
+                        {{ afrm.inventoryID(size=32)}}
+                    </p>
+                    <p>
+                        {{ afrm.staffID.label }} <br>
+                        {{ afrm.staffID(size=32) }}
+                    </p>
+                    
+                    <p>{{afrm.submit() }}</p>
+                </form>
+                </div>
+                <div id="Footer">
+                    <title>&copy; må ikke kopires</title>
+
+            </div>
+            
+
+        </div>
+
+
+
+    </body>
+</html>
